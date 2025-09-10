@@ -14,7 +14,7 @@ export const HeroSection = () => {
   };
 
   const handleSecondaryClick = () => {
-    window.location.href = '#faq';
+    window.open('https://www.businesswithaiconsultant.com/', '_blank');
   };
 
   return (

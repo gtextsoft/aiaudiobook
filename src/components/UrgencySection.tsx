@@ -1,14 +1,23 @@
 export const UrgencySection = () => {
-  const handleCTAClick = () => {
+  const handleCTAClick = (e: React.MouseEvent) => {
+    e.stopPropagation();
     window.open('https://pay.gtextglobal.com/the-ai-profit-book-upgrade/', '_blank');
   };
 
-  const handleSecondaryClick = () => {
-    window.location.href = '#faq';
+  const handleSecondaryClick = (e: React.MouseEvent) => {
+    e.stopPropagation();
+    window.open('https://www.businesswithaiconsultant.com/', '_blank');
+  };
+
+  const handleSectionClick = () => {
+    window.open('https://www.businesswithaiconsultant.com/', '_blank');
   };
 
   return (
-    <section className="py-20 bg-gradient-to-r from-red-50 to-orange-50 border-l-4 border-cta">
+    <section 
+      className="py-20 bg-gradient-to-r from-red-50 to-orange-50 border-l-4 border-cta cursor-pointer hover:from-red-100 hover:to-orange-100 transition-all duration-300"
+      onClick={handleSectionClick}
+    >
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto text-center">
           <div className="inline-flex items-center bg-cta/10 text-cta px-6 py-3 rounded-full font-semibold mb-8">
